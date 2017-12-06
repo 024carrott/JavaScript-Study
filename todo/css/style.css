@@ -1,0 +1,260 @@
+body {
+  background-color: pink;
+  padding: 0 50px;
+}
+body::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* add */
+
+.add-container {
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  text-shadow: 2px 2px 5px #eee;
+  color: gray;
+}
+
+.input-list {
+  padding: 0 10px;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 5px; 
+}
+
+.input-btn {
+  float: right;
+  border: 1px solid #eee;
+  background-color: #fff;
+}
+
+/* list */
+
+.list-container {
+  float: left;
+  padding-bottom: 10px;
+  width: 50%;
+  min-height: 50px;
+  border-radius: 10px;
+  background-color: lightblue;
+}
+
+.list-wrap{
+  display: block;
+  margin: 10px 0;
+}
+
+.list-wrap::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.checkbox {
+  float: left;
+}
+.list {
+  float: left;
+  padding: 0 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+
+}
+.edit-btn {
+  float: left;
+  margin: 0 5px;
+  padding: 0;
+  border: 1px solid #eee;
+  background-color: #fff;
+}
+
+.delete-btn {
+  float: left;
+  padding: 0;
+  border: 1px solid #eee;
+  background-color: #fff;
+
+}
+
+/* done  */
+
+.done-container {
+  float: left;
+  padding-bottom: 10px;  
+  width: 50%;
+  min-height: 50px;
+  border-radius: 10px;
+  background-color: skyblue;
+}
+
+
+
+
+
+/* 데스크탑 */
+@media screen and (min-width: 769px ){
+  
+  body {
+    padding: 0 70px;
+  }
+  /* add */
+  .add-container {
+    width: 400px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px 0;
+  }
+
+  .input-list {
+    width: 320px;
+    height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .input-btn {
+    width: 50px;
+    height: 35px;
+  }
+
+  /* list */
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    margin: 8px 8px;
+  }
+  .list {
+    width: 52%;
+    height: 35px;
+    line-height: 35px;
+  }
+  .edit-btn {
+    width: 37px;
+    height: 35px;
+    text-align: center;
+    font-size: 0.3rem;
+  }
+
+  .delete-btn {
+    width: 37px;
+    height: 35px;
+    font-size: 0.3rem;
+  }
+
+}
+/* 타블렛 */
+@media screen and (min-width: 426px ) and (max-width: 768px){
+
+  body {
+    padding: 0 30px;
+  }
+  /* add */
+  .add-container {
+    width: 360px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin: 20px 0 10px 0;    
+  }
+
+  .input-list {
+    width: 280px;
+    height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .input-btn {
+    width: 50px;
+    height: 35px;
+  }
+
+  /* list */
+
+  .checkbox {
+    width: 15px;
+    height: 15px;
+    margin: 10px 5px;
+  }
+  .list {
+    width: 46%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.3rem;
+  }
+  .edit-btn {
+    display: none;
+    width: 25px;
+    height: 30px;
+    text-align: center;
+    font-size: 0.2rem;
+  }
+
+  .delete-btn {
+    width: 33px;
+    height: 30px;
+    margin-left: 5px;
+    font-size: 0.2rem;
+  }
+}
+/* 모바일 */
+@media screen and (max-width: 425px){
+  
+  body {
+    padding: 0 10px;
+  }
+  /* add */
+  .add-container {
+    width: 260px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 20px 0 10px 0;
+  }
+
+  .input-list {
+    width: 200px;
+    height: 28px;
+    margin-bottom: 30px;
+  }
+
+  .input-btn {
+    width:35px;
+    height: 28px;
+    padding: 0;
+  }
+
+  /* list */
+
+  .checkbox {
+    width: 15px;
+    height: 15px;
+    margin: 5px 5px;
+  }
+  .list {
+    width: 60%;
+    height: 20px;
+    line-height: 20px;
+  }
+  .edit-btn {
+    display: none;
+    width: 40px;
+    height: 35px;
+    text-align: center;
+  }
+
+  .delete-btn {
+    display: none;
+    width: 40px;
+    height: 35px;
+  }
+}
