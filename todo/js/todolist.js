@@ -60,7 +60,8 @@
     checkbox.setAttribute('type', 'checkbox');
     checkbox.setAttribute('class', 'checkbox');
     list.setAttribute('class', 'list');
-    edit_list.setAttribute('class', 'edit_list');
+    edit_list.setAttribute('class', 'edit-list none');
+    edit_list.setAttribute('value', list_data);
     edit_btn.setAttribute('type', 'button');
     edit_btn.setAttribute('class', 'edit-btn');
     delete_btn.setAttribute('type', 'button');
@@ -72,6 +73,7 @@
       list_container.appendChild(list_wrap);
       list_wrap.appendChild(checkbox);
       list_wrap.appendChild(list);
+      list_wrap.appendChild(edit_list);
       list_wrap.appendChild(edit_btn);
       list_wrap.appendChild(delete_btn);
       edit_btn.innerHTML = 'edit';
@@ -91,6 +93,7 @@
         parent.removeChild(delete_btn);
         parent.removeChild(edit_btn);
         parent.removeChild(list);
+        parent.removeChild(edit_list);
         parent.removeChild(checkbox);
         grand_parent.removeChild(parent);
 
@@ -122,12 +125,14 @@
           parent.removeChild(delete_btn);
           parent.removeChild(edit_btn);
           parent.removeChild(list);
+          parent.removeChild(edit_list);
           parent.removeChild(checkbox);
           grand_parent.removeChild(parent);
   
           done_container.appendChild(list_wrap);
           list_wrap.appendChild(checkbox);
           list_wrap.appendChild(list);
+          list_wrap.appendChild(edit_list);
           list_wrap.appendChild(edit_btn);
           list_wrap.appendChild(delete_btn);
           edit_btn.innerHTML = 'edit';
@@ -142,6 +147,7 @@
           list_container.appendChild(list_wrap);
           list_wrap.appendChild(checkbox);
           list_wrap.appendChild(list);
+          list_wrap.appendChild(edit_list);
           list_wrap.appendChild(edit_btn);
           list_wrap.appendChild(delete_btn);
           edit_btn.innerHTML = 'edit';
@@ -152,14 +158,20 @@
         }
       })
       checkBox();
-    } removeToDo()
+    } removeToDo();
 
     // * edit 버튼 클릭시 
     function edit() {
       edit_btn.addEventListener('click', function(e) {
-        console.log('수정');
+        parent = this.parentNode;
+        // 부모가 가진 자식요소중 list 를 찾아야 함.
+        // 수정버튼 클릭 시 해당 부모의 edit_list에 있는 'none' 이라는 클래스 제거
+        // input 창에 입력한 값을
+        // 해당 list의 text 노드에다가 추가
+        
+        
       })
-    } edit()
+    } edit();
 
   }
 

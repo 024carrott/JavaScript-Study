@@ -45,6 +45,7 @@ h3 {
 }
 
 .list-wrap{
+  position: relative;
   display: block;
   margin: 10px 0;
 }
@@ -65,6 +66,15 @@ h3 {
   border-radius: 5px;
   background-color: #fff;
 
+}
+.edit-list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: skyblue;
 }
 .edit-btn {
   float: left;
@@ -136,6 +146,12 @@ h3 {
     height: 35px;
     line-height: 35px;
   }
+  .edit-list {
+    width: 52%;
+    height: 35px;
+    margin-left: 36px;
+    line-height: 35px;
+  }
   .edit-btn {
     width: 37px;
     height: 35px;
@@ -187,6 +203,13 @@ h3 {
   .list {
     width: 46%;
     height: 30px;
+    line-height: 30px;
+    font-size: 0.3rem;
+  }
+  .edit-list {
+    width: 46%;
+    height: 30px;
+    margin-left: 25px;
     line-height: 30px;
     font-size: 0.3rem;
   }
@@ -245,6 +268,12 @@ h3 {
     height: 20px;
     line-height: 20px;
   }
+  .edit-list {
+    width: 60%;
+    height: 20px;
+    margin-left: 25px;
+    line-height: 20px;
+  }
   .edit-btn {
     display: none;
     width: 40px;
@@ -257,4 +286,8 @@ h3 {
     width: 40px;
     height: 35px;
   }
+}
+
+.none {
+  display: none;
 }
