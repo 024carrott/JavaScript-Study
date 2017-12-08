@@ -1,5 +1,5 @@
 body {
-  background-color: pink;
+  background-color: #181818;
   padding: 0 50px;
 }
 body::after {
@@ -17,7 +17,7 @@ body::after {
 h3 {
   text-align: center;
   text-shadow: 2px 2px 5px #eee;
-  color: gray;
+  color: #fff;
 }
 
 .input-list {
@@ -41,7 +41,7 @@ h3 {
   width: 50%;
   min-height: 50px;
   border-radius: 10px;
-  background-color: lightblue;
+  background-color: #999;
 }
 
 .list-wrap{
@@ -90,7 +90,7 @@ h3 {
   width: 50%;
   min-height: 50px;
   border-radius: 10px;
-  background-color: skyblue;
+  background-color: #666;
 }
 
 
