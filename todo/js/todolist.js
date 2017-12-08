@@ -154,6 +154,13 @@
       checkBox();
     } removeToDo()
 
+    // * edit 버튼 클릭시 
+    function edit() {
+      edit_btn.addEventListener('click', function(e) {
+        console.log('수정');
+      })
+    } edit()
+
   }
 
   init();
