@@ -114,6 +114,35 @@
       })
     } 
 
+    // * edit 버튼 클릭시 수정
+    function edit() {
+      var i = 0;
+      edit_btn.addEventListener('click', function(e) {
+        i = i + 1
+        if ( i % 2 !== 0) {
+          parent = this.parentNode;
+          current_list = parent.querySelector('.edit-list');
+          console.log(current_list);
+          $(current_list).removeClass('none');
+          current_list.focus();
+        }else {
+          console.log('수정완료');
+          $(current_list).addClass('none');
+          var change_data = current_list.value;
+          list.innerText = change_data;
+          // list_data = change_data;
+        }
+
+        // 부모가 가진 자식요소중 list 를 찾아야 함.
+        // 수정버튼 클릭 시 해당 부모의 edit_list에 있는 'none' 이라는 클래스 제거
+        // input 창에 입력한 값을
+        // 해당 list의 text 노드에다가 추가
+
+        //  * 데이터 수정 *
+        
+      })
+    } edit();
+
     // * 체크박스 클릭 시 todo 에서 done 으로, done 에선 todo 로 이동 하는 함수 *
     function removeToDo() {
       checkbox.addEventListener('click', function(e) {
@@ -159,20 +188,6 @@
       })
       checkBox();
     } removeToDo();
-
-    // * edit 버튼 클릭시 
-    function edit() {
-      edit_btn.addEventListener('click', function(e) {
-        parent = this.parentNode;
-        // 부모가 가진 자식요소중 list 를 찾아야 함.
-        // 수정버튼 클릭 시 해당 부모의 edit_list에 있는 'none' 이라는 클래스 제거
-        // input 창에 입력한 값을
-        // 해당 list의 text 노드에다가 추가
-        
-        
-      })
-    } edit();
-
   }
 
   init();
