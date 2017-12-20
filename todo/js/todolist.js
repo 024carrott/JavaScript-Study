@@ -129,8 +129,9 @@
           console.log('수정완료');
           $(current_list).addClass('none');
           var change_data = current_list.value;
-          list.innerText = change_data;
-          // list_data = change_data;
+          // list.innerText = change_data;
+          list_data = change_data;
+          list.innerText = list_data;
         }
 
         // 부모가 가진 자식요소중 list 를 찾아야 함.
